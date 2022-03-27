@@ -1,0 +1,173 @@
+:root {
+    --dark-color:  #19283f;
+    --green-color:  #33d1cc;
+    --red-color:  #ff3150;
+    --yellow-color:  #ffc400;
+    --section-color:  #eff7fa;
+}
+/* start nav */
+nav * {transition: 0.3s !important;}
+
+nav,
+nav div#navbarSupportedContent  { 
+    background-color: var(--dark-color);
+    z-index: 100; 
+}
+
+nav::before {
+    content: "";
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    width: 100%;
+    height: 2px;
+    background-color: var(--green-color, white);
+}
+
+nav .container button:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--green-color, white) !important;
+}
+
+nav .container .navbar-nav li a {
+    color: var(--section-color) !important;
+}
+
+nav .container .navbar-nav li a.active {
+    color: var(--green-color) !important;
+}
+
+nav .container .navbar-nav li a:not(.active):hover {
+    color: var(--green-color) !important;
+}
+@media (min-width:992px) {
+    nav .container div.collapse.navbar-collapse {
+        position: relative !important;
+    }
+}
+
+@media (max-width: 991px) {
+    nav .container form.search svg {
+        border: 3px solid var(--white, white) !important;
+    }
+}
+
+nav .container form.search input {
+    width: 100% !important;
+    border: 3px solid var(--white, white);
+    outline: none;
+}
+
+@media (min-width:768px) and (max-width: 991px) {
+    nav .container form.search input[type='search'] {
+        width: 50% !important;
+    }
+
+    nav .container a.btn {
+        width: 50%;
+        margin: auto;
+    }
+}
+/* end nav */
+/* start landing */
+div.landing {
+    background-color: var(--dark-color);
+    height: calc(100vh - 70px);
+}
+/* end landing */
+/* start services */
+.content-text::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    margin-top: 1rem;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--green-color);
+}
+.services .container .row svg.title-icon {
+    left: -15%;
+    transform: translateX(40%);
+    color: var(--dark-color);
+}
+/* end services */
+/* start galory */
+.galory { background-color: var(--section-color, #eff7fa); }
+
+.galory .container .listShofful { width: fit-content; }
+
+.galory .container .listShofful li:not(.acitve):hover {
+    cursor: pointer;
+    color: var(--red-color);
+}
+
+.galory .container .row div { 
+    position: relative;
+    overflow: hidden;
+}   
+
+.galory .container .row div::before {
+    content: attr(data-text);
+    position: absolute;
+    top: -100%;
+    background-color: var(--green-color);
+    opacity: 0.75;
+    width: calc(100% - 32px);
+    height: calc(100% - 8px);
+    color: var(--white, white);
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.galory .container .row div:hover::before {
+    top: 4px;
+    left: 16px; 
+}
+
+.galory .container .row div img { border: 0.25rem solid var(--white, white); }
+/* end galory */
+/* start team  */
+.team {
+    background-color: var(--dark-color);
+}
+.team .card p.name {
+    background-color: var(--green-color);
+}
+/* end team  */
+/* start project */
+.start-Proj {
+    background-color: var(--dark-color);
+}
+/* end project */
+/* start contact */
+.contact form input[type='email'] {
+    outline: none;
+    border: none;
+}
+.contact form input[type='email']::placeholder {
+    color: var(--section-color);
+}
+.contact form input[type='email'] {
+    border-bottom: 2px solid var(--section-color);
+}
+
+.contact form input[type='submit'] {
+    background-color: var(--dark-color);
+}
+/* end contact */
+/* start footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--section-color);
+}
+.footer .container .row div span:first-child {
+    color: var(--green-color);
+}
+/* end footer */
